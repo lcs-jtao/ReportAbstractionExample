@@ -20,7 +20,7 @@ struct ReportsListView: View {
             ForEach(listOfReports) { currentReport in
                 
                 NavigationLink(destination: {
-                    Text(String(currentReport.grade))
+                    ReportDetailView(thisReport: currentReport)
                 }, label: {
                     Text(currentReport.name)
                 })
